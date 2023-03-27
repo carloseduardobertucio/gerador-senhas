@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: giropops-senhas
+  name: gerador-senhas
 spec:
   selector:
-    app: giropops-senhas
+    app: gerador-senhas
   ports:
     - protocol: TCP
       port: 80
