@@ -1,6 +1,6 @@
 from locust import HttpUser, task, between
 
-class Giropops(HttpUser):
+class GeradorSenhas(HttpUser):
     wait_time = between(1, 2)
 
     @task(1)
