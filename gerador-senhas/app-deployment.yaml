@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: giropops-senhas
-  name: giropops-senhas
+    app: gerador-senhas
+  name: gerador-senhas
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: giropops-senhas
+      app: gerador-senhas
   template:
     metadata:
       labels:
-        app: giropops-senhas
+        app: gerador-senhas
     spec:
       containers:
-      - image: linuxtips/giropops-senhas:1.0
-        name: giropops-senhas
+      - image: carlos/gerador-senhas:1.0
+        name: gerador-senhas
         ports:
         - containerPort: 5000
         imagePullPolicy: Always
