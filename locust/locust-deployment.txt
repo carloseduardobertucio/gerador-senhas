@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: locust-giropops
-  name: locust-giropops
+    app: locust-gerador-senhas
+  name: locust-gerador-senhas
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: locust-giropops
+      app: locust-gerador-senhas
   template:
     metadata:
       labels:
-        app: locust-giropops
+        app: locust-gerador-senhas
     spec:
       containers:
-      - image: linuxtips/locust-giropops:1.0
-        name: locust-giropops
+      - image: carlos/gerador-senhas:1.0
+        name: locust-gerador-senhas
         env:
           - name:  LOCUST_LOCUSTFILE
             value: "/usr/src/app/scripts/locustfile.py"
